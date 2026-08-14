@@ -1,0 +1,245 @@
+/* ==========================================================================
+   Krunch — temporary landing page
+   Tokens: see :root. Fonts: Paytone One (display), DM Sans (UI/body).
+   ========================================================================== */
+
+:root {
+  --ink: #512609;        /* Cioccolato — text, buttons, footer */
+  --paper: #FAF5E2;      /* Pure Linen — page background */
+  --gold: #FFCC29;       /* Gold Rush — blobs, accents */
+  --pansy: #7D1A49;      /* Pansy Purple — hover accent */
+  --hairline: rgba(81, 38, 9, 0.15);
+  --font-display: 'Paytone One', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --radius-card: 24px;
+  --container: 1280px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+a { color: var(--ink); }
+a:hover { color: var(--pansy); }
+
+h1, h2, h3 { font-family: var(--font-display); font-weight: 400; margin: 0; }
+
+.container { max-width: var(--container); margin: 0 auto; padding-left: 48px; padding-right: 48px; }
+
+/* --- Buttons ------------------------------------------------------------ */
+.btn {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 999px;
+  padding: 13px 26px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+.btn-brown { background: var(--ink); color: var(--paper); }
+.btn-brown:hover { background: var(--pansy); color: var(--paper); }
+.btn-cream { background: var(--paper); color: var(--ink); padding: 11px 24px; }
+.btn-cream:hover { background: var(--gold); color: var(--ink); }
+.btn-outline { background: transparent; color: var(--ink); border: 2px solid var(--ink); padding: 11px 26px; }
+.btn-outline:hover { background: var(--ink); color: var(--paper); }
+.btn-lg { font-size: 16px; padding: 16px 32px; }
+
+/* --- Badges ------------------------------------------------------------- */
+.badge {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 7px 16px;
+}
+.badge-gold { background: var(--gold); }
+.badge-outline { border: 1.5px solid var(--ink); }
+
+/* --- Background blobs ---------------------------------------------------- */
+.bg-blobs { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.bg-blobs .blob { position: absolute; height: auto; }
+.bg-blobs .blob path { fill: var(--gold); }
+
+/* --- Header --------------------------------------------------------------- */
+.site-header { position: sticky; top: 0; z-index: 10; padding: 20px 24px 8px; }
+.nav-pill {
+  max-width: 1180px;
+  margin: 0 auto;
+  background: var(--ink);
+  border-radius: 999px;
+  padding: 14px 14px 14px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  position: relative;
+}
+.nav-logo { position: relative; margin-left: -14px; flex: none; width: 230px; height: 56px; display: block; }
+.nav-logo svg { position: absolute; top: -24px; left: 0; width: 230px; height: 110px; }
+.nav-logo img { position: absolute; top: 14px; left: 46px; height: 28px; }
+.nav-links { display: flex; align-items: center; gap: 24px; padding-right: 10px; }
+.nav-links > a:not(.btn) { font-weight: 700; font-size: 16px; text-decoration: none; color: var(--paper); }
+.nav-links > a:not(.btn):hover { color: var(--gold); }
+
+.lang-switch {
+  display: flex;
+  background: rgba(250, 245, 226, 0.12);
+  border: 1.5px solid rgba(250, 245, 226, 0.4);
+  border-radius: 999px;
+  padding: 3px;
+  gap: 2px;
+}
+.lang-switch button {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  border: none;
+  border-radius: 999px;
+  padding: 6px 12px;
+  cursor: pointer;
+  background: transparent;
+  color: var(--paper);
+}
+.lang-switch button.active { background: var(--paper); color: var(--ink); }
+
+/* --- Hero ----------------------------------------------------------------- */
+.hero { position: relative; overflow: hidden; min-height: 90vh; max-width: var(--container); margin: 0 auto; padding: 56px 48px 0; }
+.hero-blob {
+  position: absolute;
+  z-index: 0;
+  right: -4%;
+  bottom: -2%;
+  width: 48%;
+  height: auto;
+}
+.hero h1 {
+  font-size: clamp(56px, 7.2vw, 96px);
+  line-height: 0.98;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: -1px;
+  position: relative;
+  z-index: 1;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr 1fr;
+  gap: 24px;
+  align-items: center;
+  margin-top: -20px;
+  position: relative;
+  z-index: 2;
+}
+.hero-chips { grid-column: 1; align-self: end; display: grid; gap: 44px; justify-items: start; padding-bottom: 40px; position: relative; top: 30px; }
+.chip { display: grid; gap: 14px; justify-items: start; }
+.chip-ring { position: relative; display: grid; place-items: center; width: 120px; height: 120px; }
+.chip-ring .ring-shape { position: absolute; inset: 0; width: 100%; height: 100%; }
+.chip-ring .ring-shape path { fill: none; stroke: var(--ink); stroke-width: 3; }
+.chip-icon { position: relative; width: 46px; height: 46px; color: var(--ink); }
+.chip-icon path, .chip-icon rect, .chip-icon line { stroke: currentColor; }
+.chip-flip .ring-shape { transform: scaleX(-1); }
+.chip-label { font-weight: 700; font-size: 18px; }
+
+.hero-bag {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  width: 62%;
+  max-width: 780px;
+  height: auto;
+}
+.hero-bag img { width: 100%; height: auto; display: block; }
+
+.hero-aside { grid-column: 3; display: grid; gap: 20px; justify-items: start; padding-bottom: 80px; }
+.hero-aside p { font-size: 17px; line-height: 1.6; margin: 0; }
+
+/* --- Bands (white full-width sections) ------------------------------------ */
+.band { background: #fff; border-top: 1.5px solid var(--hairline); border-bottom: 1.5px solid var(--hairline); position: relative; }
+
+/* --- Product ---------------------------------------------------------------- */
+.product-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 56px; align-items: center; padding-top: 72px; padding-bottom: 72px; }
+.product-photo { position: relative; display: grid; place-items: center; padding: 24px; }
+.product-photo .product-blob { position: absolute; top: 15%; left: -8%; width: 115%; height: 80%; }
+.product-photo img { width: 100%; max-width: 380px; position: relative; }
+.product-info { display: grid; gap: 18px; justify-items: start; }
+.product-info h2 { font-size: 44px; line-height: 1.05; text-transform: uppercase; }
+.price { margin: 0; }
+.price strong { font-size: 26px; }
+.price span { font-size: 14px; opacity: 0.6; }
+.product-info > p { font-size: 16px; line-height: 1.65; margin: 0; }
+.ingredients { font-size: 14px; line-height: 1.6; opacity: 0.85; }
+
+/* --- Value cards -------------------------------------------------------------- */
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding-top: 72px; padding-bottom: 72px; position: relative; }
+.card { background: #fff; border: 1.5px solid var(--hairline); border-radius: var(--radius-card); padding: 28px; display: grid; gap: 12px; justify-items: start; }
+.card svg { width: 44px; height: 22px; }
+.card h3 { font-size: 20px; }
+.card p { font-size: 14px; line-height: 1.6; opacity: 0.85; margin: 0; }
+
+/* --- Story ------------------------------------------------------------------ */
+.story-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 56px; align-items: center; padding-top: 72px; padding-bottom: 72px; }
+.story-photo { position: relative; height: 400px; }
+.story-frame { position: absolute; overflow: visible; }
+.story-frame .frame-ring { fill: none; stroke: var(--ink); stroke-width: 4; }
+.story-frame.frame-1 { top: 0; left: 0; width: 76%; height: 76%; z-index: 1; }
+.story-frame.frame-2 { right: 0; bottom: 0; width: 52%; height: 52%; z-index: 2; }
+.story-text { display: grid; gap: 16px; justify-items: start; }
+.story-text h2 { font-size: 32px; line-height: 1.15; }
+.story-text p { font-size: 16px; line-height: 1.65; opacity: 0.9; margin: 0; }
+
+/* --- Social band ---------------------------------------------------------------- */
+.social-wrap { padding-top: 64px; padding-bottom: 72px; position: relative; }
+.social { background: var(--gold); border-radius: var(--radius-card); padding: 56px; text-align: center; position: relative; overflow: hidden; display: grid; gap: 18px; justify-items: center; }
+.social-blob { position: absolute; opacity: 0.3; }
+.social-blob-tl { left: -90px; top: -50px; width: 300px; }
+.social-blob-br { right: -70px; bottom: -40px; width: 240px; }
+.eyebrow { font-weight: 700; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; margin: 0; position: relative; }
+.social h2 { font-size: 34px; line-height: 1.15; max-width: 600px; position: relative; }
+.social > p:not(.eyebrow) { font-size: 16px; line-height: 1.6; max-width: 480px; margin: 0; position: relative; }
+.social-links { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; position: relative; }
+
+/* --- Footer -------------------------------------------------------------------- */
+.site-footer { background: var(--ink); color: var(--paper); margin-top: auto; position: relative; overflow: hidden; }
+.footer-blob { position: absolute; right: -70px; bottom: -50px; width: 280px; opacity: 0.15; }
+.footer-grid { display: flex; justify-content: space-between; gap: 40px; flex-wrap: wrap; align-items: flex-start; padding-top: 56px; position: relative; }
+.footer-logo { height: 30px; display: block; margin-bottom: 14px; }
+.footer-grid p { font-size: 14px; line-height: 1.6; opacity: 0.8; max-width: 280px; margin: 0; }
+.footer-col { display: grid; gap: 8px; font-size: 14px; align-content: start; }
+.footer-col h4 { font-family: var(--font-body); font-weight: 700; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; opacity: 0.6; margin: 0; }
+.footer-col a { color: var(--paper); text-decoration: none; opacity: 0.9; }
+.footer-col a:hover { color: var(--gold); }
+.footer-col span { opacity: 0.85; }
+.footer-legal { border-top: 1px solid rgba(250, 245, 226, 0.2); margin-top: 32px; padding-top: 18px; padding-bottom: 24px; font-size: 12px; opacity: 0.6; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; position: relative; }
+
+/* --- Responsive -------------------------------------------------------------- */
+@media (max-width: 960px) {
+  .container, .hero { padding-left: 24px; padding-right: 24px; }
+  .hero { min-height: auto; overflow: visible; }
+  .hero-grid { grid-template-columns: 1fr; margin-top: 8px; }
+  .hero-chips { grid-auto-flow: column; padding-bottom: 0; gap: 20px; top: 0; align-self: auto; }
+  .chip-ring { width: 76px; height: 76px; }
+  .chip-icon { width: 30px; height: 30px; }
+  .chip-label { font-size: 15px; }
+  .hero-aside { grid-column: 1; padding-bottom: 0; }
+  .hero-bag { position: static; left: auto; top: auto; height: auto; width: 100%; max-width: 360px; margin: 24px auto 0; }
+  .hero-bag img { height: auto; width: 100%; }
+  .product-grid, .story-grid { grid-template-columns: 1fr; }
+  .cards { grid-template-columns: 1fr; }
+  .nav-links > a:not(.btn) { display: none; }
+  .nav-logo { width: 160px; }
+  .nav-logo svg { width: 170px; height: 82px; top: -14px; }
+  .nav-logo img { height: 22px; top: 16px; left: 38px; }
+  .social { padding: 40px 24px; }
+}

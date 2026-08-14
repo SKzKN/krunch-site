@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Krunch — Granola that hits the spot</title>
+<meta name="description" content="Small-batch Estonian granola. Slow-toasted oats, whole almonds, chia and honey. Order by email while our shop is being built.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- Background blobs (parallax) -->
+<div class="bg-blobs" aria-hidden="true">
+  <svg class="blob" data-speed="0.10" style="top:300px; right:-120px; width:300px" viewBox="0 0 260 130"><path d="M67 15 C110 -8 200 -6 232 28 C256 54 252 94 222 104 C196 113 180 90 150 97 C122 104 96 130 60 117 C24 104 10 68 24 44 C35 26 48 25 67 15 Z"/></svg>
+  <svg class="blob" data-speed="0.16" style="top:850px; left:-160px; width:380px" viewBox="0 0 260 130"><path d="M67 15 C110 -8 200 -6 232 28 C256 54 252 94 222 104 C196 113 180 90 150 97 C122 104 96 130 60 117 C24 104 10 68 24 44 C35 26 48 25 67 15 Z"/></svg>
+  <svg class="blob" data-speed="0.12" style="top:1500px; right:-140px; width:330px" viewBox="0 0 260 130"><path d="M67 15 C110 -8 200 -6 232 28 C256 54 252 94 222 104 C196 113 180 90 150 97 C122 104 96 130 60 117 C24 104 10 68 24 44 C35 26 48 25 67 15 Z"/></svg>
+  <svg class="blob" data-speed="0.20" style="top:2150px; left:-120px; width:280px" viewBox="0 0 260 130"><path d="M67 15 C110 -8 200 -6 232 28 C256 54 252 94 222 104 C196 113 180 90 150 97 C122 104 96 130 60 117 C24 104 10 68 24 44 C35 26 48 25 67 15 Z"/></svg>
+  <svg class="blob" data-speed="0.15" style="top:2700px; right:-100px; width:250px" viewBox="0 0 260 130"><path d="M67 15 C110 -8 200 -6 232 28 C256 54 252 94 222 104 C196 113 180 90 150 97 C122 104 96 130 60 117 C24 104 10 68 24 44 C35 26 48 25 67 15 Z"/></svg>
+</div>
+
+<!-- Header -->
+<header class="site-header">
+  <nav class="nav-pill">
+    <a class="nav-logo" href="#">
+      <svg viewBox="0 0 260 130" aria-hidden="true"><path fill="#FFCC29" d="M67 15 C110 -8 200 -6 232 28 C256 54 252 94 222 104 C196 113 180 90 150 97 C122 104 96 130 60 117 C24 104 10 68 24 44 C35 26 48 25 67 15 Z"/></svg>
+      <img src="assets/krunch-logotype-brown.png" alt="Krunch">
+    </a>
+    <div class="nav-links">
+      <a href="#story" data-i18n="navStory">Our story</a>
+      <a href="#product" data-i18n="navProduct">Ingredients</a>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" data-lang="en" class="active">EN</button>
+        <button type="button" data-lang="et">ET</button>
+      </div>
+      <a class="btn btn-cream js-mailto" href="#" data-i18n="navOrder">Order by email</a>
+    </div>
+  </nav>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <svg class="hero-blob" viewBox="0 0 260 130" preserveAspectRatio="none" aria-hidden="true"><path fill="#FFCC29" d="M67 15 C110 -8 200 -6 232 28 C256 54 252 94 222 104 C196 113 180 90 150 97 C122 104 96 130 60 117 C24 104 10 68 24 44 C35 26 48 25 67 15 Z"/></svg>
+  <h1 data-i18n="heroTitle">Granola that hits the spot</h1>
+  <div class="hero-grid">
+    <div class="hero-chips">
+      <div class="chip">
+        <span class="chip-ring">
+          <svg class="ring-shape" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 6 C70 6 92 16 94 40 C96 64 82 90 56 93 C32 96 8 80 6 56 C4 32 24 8 50 6 Z"/></svg>
+          <svg class="chip-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19C5 9 12 4 19 4c0 9-5 15-14 15Z" fill="none" stroke-width="1.6" stroke-linejoin="round"/><path d="M6.5 17.5C10.5 12.5 13.5 9.5 18 5.5" fill="none" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </span>
+        <span class="chip-label" data-i18n="chip1">100% natural</span>
+      </div>
+      <div class="chip chip-flip">
+        <span class="chip-ring">
+          <svg class="ring-shape" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 6 C70 6 92 16 94 40 C96 64 82 90 56 93 C32 96 8 80 6 56 C4 32 24 8 50 6 Z"/></svg>
+          <svg class="chip-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="9" width="9" height="9" rx="1.5" fill="none" stroke-width="1.6"/><line x1="4" y1="4" x2="20" y2="20" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </span>
+        <span class="chip-label" data-i18n="chip2">No added sugar</span>
+      </div>
+      <div class="chip">
+        <span class="chip-ring">
+          <svg class="ring-shape" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 6 C70 6 92 16 94 40 C96 64 82 90 56 93 C32 96 8 80 6 56 C4 32 24 8 50 6 Z"/></svg>
+          <svg class="chip-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.5-9.3-9C1.2 7.7 3 4.5 6.5 4.5c2 0 3.7 1.3 5.5 3.5 1.8-2.2 3.5-3.5 5.5-3.5 3.5 0 5.3 3.2 3.8 6.5C19 15.5 12 20 12 20Z" fill="none" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="chip-label" data-i18n="chip3">Handmade in Estonia</span>
+      </div>
+    </div>
+    <div class="hero-aside">
+      <p data-i18n="heroBody">Slow-toasted oats, whole almonds, chia and Estonian honey. Our shop opens soon — until then, order straight from us.</p>
+      <a class="btn btn-brown js-mailto" href="#" data-i18n="orderCtaShort">Order by email</a>
+    </div>
+    <div class="hero-bag">
+      <img src="assets/chia-honey-almond-bag.png" alt="CHIA Honey Almond granola bag">
+    </div>
+  </div>
+</section>
+
+<!-- Product -->
+<section class="product band" id="product">
+  <div class="container product-grid">
+    <div class="product-photo">
+      <svg class="product-blob" viewBox="0 0 260 130" preserveAspectRatio="none" aria-hidden="true"><path fill="#FFCC29" d="M67 15 C110 -8 200 -6 232 28 C256 54 252 94 222 104 C196 113 180 90 150 97 C122 104 96 130 60 117 C24 104 10 68 24 44 C35 26 48 25 67 15 Z"/></svg>
+      <img src="assets/chia-honey-almond-bag.png" alt="CHIA Honey Almond granola bag">
+    </div>
+    <div class="product-info">
+      <span class="badge badge-gold" data-i18n="productBadge">First flavour</span>
+      <h2>CHIA Honey Almond</h2>
+      <p class="price"><strong>€8.90</strong> <span>/ 350 g</span></p>
+      <p data-i18n="productBody">Slow-toasted whole oats with almonds, chia and pumpkin seeds, finished with Estonian honey. Seven ingredients, all of them food — no syrups, no fillers, nothing artificial.</p>
+      <p class="ingredients"><strong data-i18n="ingredientsLabel">Ingredients:</strong> <span data-i18n="ingredients">whole oats, almonds (15%), chia seeds, pumpkin seeds, honey, cold-pressed rapeseed oil, sea salt.</span></p>
+      <a class="btn btn-brown btn-lg js-mailto" href="#" data-i18n="orderCta">Order by email — €8.90</a>
+    </div>
+  </div>
+</section>
+
+<!-- Value cards -->
+<section class="container cards">
+  <article class="card">
+    <svg viewBox="0 0 260 130" aria-hidden="true"><path fill="#FFCC29" d="M67 15 C110 -8 200 -6 232 28 C256 54 252 94 222 104 C196 113 180 90 150 97 C122 104 96 130 60 117 C24 104 10 68 24 44 C35 26 48 25 67 15 Z"/></svg>
+    <h3 data-i18n="card1Title">Nothing added</h3>
+    <p data-i18n="card1Body">No refined sugar, no fillers, no preservatives. Sweetness from honey alone.</p>
+  </article>
+  <article class="card">
+    <svg viewBox="0 0 260 130" aria-hidden="true"><path fill="#FFCC29" d="M67 15 C110 -8 200 -6 232 28 C256 54 252 94 222 104 C196 113 180 90 150 97 C122 104 96 130 60 117 C24 104 10 68 24 44 C35 26 48 25 67 15 Z"/></svg>
+    <h3 data-i18n="card2Title">Made for routine</h3>
+    <p data-i18n="card2Body">Steady energy from whole oats, protein from almonds, chia and seeds.</p>
+  </article>
+  <article class="card">
+    <svg viewBox="0 0 260 130" aria-hidden="true"><path fill="#FFCC29" d="M67 15 C110 -8 200 -6 232 28 C256 54 252 94 222 104 C196 113 180 90 150 97 C122 104 96 130 60 117 C24 104 10 68 24 44 C35 26 48 25 67 15 Z"/></svg>
+    <h3 data-i18n="card3Title">Estonian, proudly</h3>
+    <p data-i18n="card3Body">Mixed, toasted and packed in small batches in Tallinn.</p>
+  </article>
+</section>
+
+<!-- Story -->
+<section class="story band" id="story">
+  <div class="container story-grid">
+    <div class="story-photo">
+      <svg class="story-frame frame-1" viewBox="0 0 260 130" aria-hidden="true">
+        <defs><clipPath id="storyClip1" clipPathUnits="userSpaceOnUse"><path d="M67 15 C110 -8 200 -6 232 28 C256 54 252 94 222 104 C196 113 180 90 150 97 C122 104 96 130 60 117 C24 104 10 68 24 44 C35 26 48 25 67 15 Z"/></clipPath></defs>
+        <image href="assets/story-kitchen.jpg" x="0" y="0" width="260" height="130" preserveAspectRatio="xMidYMid slice" clip-path="url(#storyClip1)"></image>
+        <path class="frame-ring" d="M67 15 C110 -8 200 -6 232 28 C256 54 252 94 222 104 C196 113 180 90 150 97 C122 104 96 130 60 117 C24 104 10 68 24 44 C35 26 48 25 67 15 Z"/>
+      </svg>
+      <svg class="story-frame frame-2" viewBox="0 0 200 200" aria-hidden="true">
+        <defs><clipPath id="storyClip2" clipPathUnits="userSpaceOnUse"><path d="M100 14 C132 10 162 26 176 56 C190 86 186 122 160 146 C136 168 100 176 68 164 C34 152 14 118 18 84 C22 52 46 26 78 18 C85 16 92 15 100 14 Z"/></clipPath></defs>
+        <image href="assets/story-labels.jpg" x="0" y="0" width="200" height="200" preserveAspectRatio="xMidYMid slice" clip-path="url(#storyClip2)"></image>
+        <path class="frame-ring" d="M100 14 C132 10 162 26 176 56 C190 86 186 122 160 146 C136 168 100 176 68 164 C34 152 14 118 18 84 C22 52 46 26 78 18 C85 16 92 15 100 14 Z"/>
+      </svg>
+    </div>
+    <div class="story-text">
+      <span class="badge badge-outline" data-i18n="storyBadge">Our story</span>
+      <h2 data-i18n="storyTitle">If it doesn't belong in your body, it doesn't belong in the bag.</h2>
+      <p data-i18n="storyBody1">Krunch started in a Tallinn kitchen with a simple frustration: every "healthy" granola on the shelf was candy in disguise. So we made our own — slow-toasted whole oats, honey-only sweetness, seven ingredients.</p>
+      <p data-i18n="storyBody2">Every bag is mixed, toasted and packed in Estonia.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Social band -->
+<section class="container social-wrap">
+  <div class="social">
+    <svg class="social-blob social-blob-tl" viewBox="0 0 260 130" aria-hidden="true"><path fill="none" stroke="#512609" stroke-width="4" d="M67 15 C110 -8 200 -6 232 28 C256 54 252 94 222 104 C196 113 180 90 150 97 C122 104 96 130 60 117 C24 104 10 68 24 44 C35 26 48 25 67 15 Z"/></svg>
+    <svg class="social-blob social-blob-br" viewBox="0 0 260 130" aria-hidden="true"><path fill="none" stroke="#512609" stroke-width="4" d="M67 15 C110 -8 200 -6 232 28 C256 54 252 94 222 104 C196 113 180 90 150 97 C122 104 96 130 60 117 C24 104 10 68 24 44 C35 26 48 25 67 15 Z"/></svg>
+    <p class="eyebrow" data-i18n="socialEyebrow">Follow the launch</p>
+    <h2 data-i18n="socialTitle">The shop opens soon. The story is already happening.</h2>
+    <p data-i18n="socialBody">New flavours, kitchen tests and launch news — first on our socials.</p>
+    <div class="social-links">
+      <a class="btn btn-brown" href="https://instagram.com/krunch">Instagram</a>
+      <a class="btn btn-outline" href="https://tiktok.com/@krunch">TikTok</a>
+      <a class="btn btn-outline" href="https://facebook.com/krunch">Facebook</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <svg class="footer-blob" viewBox="0 0 260 130" aria-hidden="true"><path fill="none" stroke="#FAF5E2" stroke-width="3" d="M67 15 C110 -8 200 -6 232 28 C256 54 252 94 222 104 C196 113 180 90 150 97 C122 104 96 130 60 117 C24 104 10 68 24 44 C35 26 48 25 67 15 Z"/></svg>
+  <div class="container footer-grid">
+    <div>
+      <img class="footer-logo" src="assets/krunch-logotype-cream.png" alt="Krunch">
+      <p data-i18n="footerBlurb">Full online shop coming soon. Until then, orders by email — we answer every one.</p>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="footerContact">Contact</h4>
+      <a href="mailto:hello@krunch.ee">hello@krunch.ee</a>
+      <span>Tallinn, <span data-i18n="estonia">Estonia</span></span>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="footerFollow">Follow us</h4>
+      <a href="https://instagram.com/krunch">Instagram</a>
+      <a href="https://facebook.com/krunch">Facebook</a>
+      <a href="https://tiktok.com/@krunch">TikTok</a>
+    </div>
+  </div>
+  <div class="container footer-legal">
+    <span>© 2026 Krunch OÜ, Tallinn</span>
+    <span data-i18n="footerLegal">Privacy · Terms</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
