@@ -3,8 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Krunch — Granola that hits the spot</title>
+<title>Krunch.ee</title>
 <meta name="description" content="Small-batch Estonian granola. Slow-toasted oats, whole almonds, chia and honey. Order by email while our shop is being built.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
@@ -28,8 +30,6 @@
       <img src="assets/krunch-logotype-brown.png" alt="Krunch">
     </a>
     <div class="nav-links">
-      <a href="#story" data-i18n="navStory">Our story</a>
-      <a href="#product" data-i18n="navProduct">Ingredients</a>
       <div class="lang-switch" role="group" aria-label="Language">
         <button type="button" data-lang="en" class="active">EN</button>
         <button type="button" data-lang="et">ET</button>
@@ -67,18 +67,14 @@
         <span class="chip-label" data-i18n="chip3">Handmade in Estonia</span>
       </div>
     </div>
-    <div class="hero-aside">
-      <p data-i18n="heroBody">Slow-toasted oats, whole almonds, chia and Estonian honey. Our shop opens soon — until then, order straight from us.</p>
-      <a class="btn btn-brown js-mailto" href="#" data-i18n="orderCtaShort">Order by email</a>
-    </div>
     <div class="hero-bag">
       <img src="assets/chia-honey-almond-bag.png" alt="CHIA Honey Almond granola bag">
     </div>
   </div>
 </section>
 
-<!-- Product -->
-<section class="product band" id="product">
+<!-- Product (hidden pre-launch — remove `hidden` to re-enable) -->
+<section class="product band" id="product" hidden>
   <div class="container product-grid">
     <div class="product-photo">
       <svg class="product-blob" viewBox="0 0 260 130" preserveAspectRatio="none" aria-hidden="true"><path fill="#FFCC29" d="M67 15 C110 -8 200 -6 232 28 C256 54 252 94 222 104 C196 113 180 90 150 97 C122 104 96 130 60 117 C24 104 10 68 24 44 C35 26 48 25 67 15 Z"/></svg>
@@ -95,8 +91,8 @@
   </div>
 </section>
 
-<!-- Value cards -->
-<section class="container cards">
+<!-- Value cards (hidden pre-launch — remove `hidden` to re-enable) -->
+<section class="container cards" hidden>
   <article class="card">
     <svg viewBox="0 0 260 130" aria-hidden="true"><path fill="#FFCC29" d="M67 15 C110 -8 200 -6 232 28 C256 54 252 94 222 104 C196 113 180 90 150 97 C122 104 96 130 60 117 C24 104 10 68 24 44 C35 26 48 25 67 15 Z"/></svg>
     <h3 data-i18n="card1Title">Nothing added</h3>
@@ -114,8 +110,8 @@
   </article>
 </section>
 
-<!-- Story -->
-<section class="story band" id="story">
+<!-- Story (hidden pre-launch — remove `hidden` to re-enable) -->
+<section class="story band" id="story" hidden>
   <div class="container story-grid">
     <div class="story-photo">
       <svg class="story-frame frame-1" viewBox="0 0 260 130" aria-hidden="true">
@@ -138,19 +134,14 @@
   </div>
 </section>
 
-<!-- Social band -->
-<section class="container social-wrap">
+<!-- Notify -->
+<section class="container social-wrap" id="notify">
   <div class="social">
     <svg class="social-blob social-blob-tl" viewBox="0 0 260 130" aria-hidden="true"><path fill="none" stroke="#512609" stroke-width="4" d="M67 15 C110 -8 200 -6 232 28 C256 54 252 94 222 104 C196 113 180 90 150 97 C122 104 96 130 60 117 C24 104 10 68 24 44 C35 26 48 25 67 15 Z"/></svg>
     <svg class="social-blob social-blob-br" viewBox="0 0 260 130" aria-hidden="true"><path fill="none" stroke="#512609" stroke-width="4" d="M67 15 C110 -8 200 -6 232 28 C256 54 252 94 222 104 C196 113 180 90 150 97 C122 104 96 130 60 117 C24 104 10 68 24 44 C35 26 48 25 67 15 Z"/></svg>
-    <p class="eyebrow" data-i18n="socialEyebrow">Follow the launch</p>
-    <h2 data-i18n="socialTitle">The shop opens soon. The story is already happening.</h2>
-    <p data-i18n="socialBody">New flavours, kitchen tests and launch news — first on our socials.</p>
-    <div class="social-links">
-      <a class="btn btn-brown" href="https://instagram.com/krunch">Instagram</a>
-      <a class="btn btn-outline" href="https://tiktok.com/@krunch">TikTok</a>
-      <a class="btn btn-outline" href="https://facebook.com/krunch">Facebook</a>
-    </div>
+    <p class="eyebrow" data-i18n="notifyEyebrow">Coming soon</p>
+    <h2 data-i18n="notifyTitle">Follow along until we launch</h2>
+    <a class="btn btn-brown" href="https://www.facebook.com/profile.php?id=61593616550305" data-i18n="notifyCta">Follow on Facebook</a>
   </div>
 </section>
 
@@ -160,18 +151,15 @@
   <div class="container footer-grid">
     <div>
       <img class="footer-logo" src="assets/krunch-logotype-cream.png" alt="Krunch">
-      <p data-i18n="footerBlurb">Full online shop coming soon. Until then, orders by email — we answer every one.</p>
     </div>
     <div class="footer-col">
       <h4 data-i18n="footerContact">Contact</h4>
-      <a href="mailto:hello@krunch.ee">hello@krunch.ee</a>
+      <a href="mailto:info@krunch.ee">info@krunch.ee</a>
       <span>Tallinn, <span data-i18n="estonia">Estonia</span></span>
     </div>
     <div class="footer-col">
       <h4 data-i18n="footerFollow">Follow us</h4>
-      <a href="https://instagram.com/krunch">Instagram</a>
-      <a href="https://facebook.com/krunch">Facebook</a>
-      <a href="https://tiktok.com/@krunch">TikTok</a>
+      <a href="https://www.facebook.com/profile.php?id=61593616550305">Facebook</a>
     </div>
   </div>
   <div class="container footer-legal">

@@ -16,6 +16,7 @@
 }
 
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 
 body {
   margin: 0;
@@ -113,7 +114,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; margin: 0; }
 .lang-switch button.active { background: var(--paper); color: var(--ink); }
 
 /* --- Hero ----------------------------------------------------------------- */
-.hero { position: relative; overflow: hidden; min-height: 90vh; max-width: var(--container); margin: 0 auto; padding: 56px 48px 0; }
+.hero { position: relative; overflow: hidden; min-height: min(90vh, 95vw, 1250px); max-width: var(--container); margin: 0 auto; padding: 56px 48px 0; }
 .hero-blob {
   position: absolute;
   z-index: 0;
@@ -156,8 +157,8 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; margin: 0; }
   left: 50%;
   transform: translateX(-50%);
   top: 0;
-  width: 62%;
-  max-width: 780px;
+  width: 50%;
+  max-width: 630px;
   height: auto;
 }
 .hero-bag img { width: 100%; height: auto; display: block; }
@@ -208,7 +209,6 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; margin: 0; }
 .eyebrow { font-weight: 700; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; margin: 0; position: relative; }
 .social h2 { font-size: 34px; line-height: 1.15; max-width: 600px; position: relative; }
 .social > p:not(.eyebrow) { font-size: 16px; line-height: 1.6; max-width: 480px; margin: 0; position: relative; }
-.social-links { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; position: relative; }
 
 /* --- Footer -------------------------------------------------------------------- */
 .site-footer { background: var(--ink); color: var(--paper); margin-top: auto; position: relative; overflow: hidden; }
@@ -233,13 +233,13 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; margin: 0; }
   .chip-icon { width: 30px; height: 30px; }
   .chip-label { font-size: 15px; }
   .hero-aside { grid-column: 1; padding-bottom: 0; }
-  .hero-bag { position: static; left: auto; top: auto; height: auto; width: 100%; max-width: 360px; margin: 24px auto 0; }
+  .hero-bag { grid-column: 1; justify-self: center; position: static; left: auto; top: auto; height: auto; width: 100%; max-width: 360px; margin-top: 24px; }
   .hero-bag img { height: auto; width: 100%; }
+  .social { padding: 40px 24px; }
   .product-grid, .story-grid { grid-template-columns: 1fr; }
   .cards { grid-template-columns: 1fr; }
   .nav-links > a:not(.btn) { display: none; }
   .nav-logo { width: 160px; }
   .nav-logo svg { width: 170px; height: 82px; top: -14px; }
   .nav-logo img { height: 22px; top: 16px; left: 38px; }
-  .social { padding: 40px 24px; }
 }
